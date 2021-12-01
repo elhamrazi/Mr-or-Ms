@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mr_or_Ms</title>
+    <link href="style/style.css" rel="stylesheet">
+    <script type="text/javascript" src="app.js" defer></script>
+</head>
+<body>
+    <h1 id="title">Mr. or Ms. ?</h1>
+    <div class="container">
+    <div class="form1">
+        <form action="https://api.genderize.io/" method="get">
+            <label for="name">Enter your name: </label><br>
+             <input type="text" name="name" id="name" required>
+            <input type="submit" value="submit">
+        </div>
+        </form>
+
+    <div class="form2">
+        <input type="radio" id="MaleChoice"
+         name="gender" value="male">
+        <label for="MaleChoice">Male</label>
+        <br>
+        <input type="radio" id="FemaleChoice"
+         name="gender" value="female">
+        <label for="FemaleChoice">Female</label>
+        <button type="submit">Save</button>
+    </div>
+    
+    <div class="result">
+        <p>This is the gender.</p>
+        <p>this is the percentage.</p>
+    </div>
+
+    <div class="storage">
+        <p>This is saved result.</p>
+    </div>
+
+</div>
+    
+</body>

@@ -1,0 +1,16 @@
+
+.container {
+
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+
+    margin-left: 30vmax;
+    margin-right: 30vmax;
+    margin-top: 10vmax;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #2196F3;
+  }
