@@ -1,4 +1,12 @@
 
+html  {
+    background: url(../images/14.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
 .container {
 
     padding-top: 50px;
@@ -10,7 +18,24 @@
     margin-right: 30vmax;
     margin-top: 10vmax;
 
+    grid-gap: 10px;
+    font-family: 'Lato';
+    font-size: 1.1em;
+
     display: grid;
     grid-template-columns: auto auto;
     background-color: #2196F3;
+
+    border-radius: 25px;
+  }
+
+  .form1 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .form2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+
   }
