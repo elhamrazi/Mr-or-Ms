@@ -8,7 +8,7 @@ html  {
   }
 
 .container {
-
+    font-family: "Inter", serif;
     padding-top: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
@@ -19,7 +19,6 @@ html  {
     margin-top: 10vmax;
 
     grid-gap: 10px;
-    font-family: 'Lato';
     font-size: 1.1em;
 
     display: grid;
