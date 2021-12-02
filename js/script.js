@@ -1,5 +1,7 @@
 function submitName(){
+    //get name value from form
     let name = document.getElementById("name").value;
+    //check if the name is in valid format.
     if(!/^[a-z ]+$/.test(name)){
         window.alert("Wrong input!");
         return;
@@ -16,9 +18,11 @@ function submitName(){
     }
 
     // checkStorage(name);
+    //GET request to the url to get the results.
     fetch("https://api.genderize.io/?" + new URLSearchParams({
         name: name
     }))
+    //json object.
         .then(response => response.json())
         .then((response) => {
             const {gender, probability} = response;
@@ -36,7 +40,7 @@ function submitName(){
         });
 }
 
-
+//save result in local storage.
 function saveResult(){
     let name = document.getElementById("name").value;
     let male = document.getElementById("MaleChoice").checked
@@ -54,7 +58,7 @@ function saveResult(){
     document.getElementById("saved_result").innerHTML = gen
 
 }
-
+//clear the key:value saved in local storage.
 function clearSaved(){
     let name = document.getElementById("name").value;
     window.localStorage.removeItem(name);
