@@ -1,4 +1,6 @@
 
+
+/* here we set the image to the background.*/
 html  {
     background: url(../images/14.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -7,6 +9,9 @@ html  {
     background-size: cover;
   }
 
+  /* container block is the rectangle in the middle of our page. we use grid 
+  to set the items in the required order. */
+  /* we also have set the font, color and the size of the container division.*/
 .container {
     font-family: "Inter", serif;
     padding-top: 50px;
@@ -27,12 +32,13 @@ html  {
 
     border-radius: 25px;
   }
-
+/* form 1 is responsible for sending the name and getting the result.*/
   .form1 {
     grid-row-start: 1;
     grid-row-end: 2;
   }
 
+/* saving the result - also ordering the items in grid*/
   .form2 {
     grid-row-start: 2;
     grid-row-end: 3;
