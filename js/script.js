@@ -2,7 +2,7 @@ function submitName(){
     //get name value from form
     let name = document.getElementById("name").value;
     //check if the name is in valid format.
-    if(!/[a-z]/.test(str) && /[A-Z]/.test(name)){
+    if(!/[a-z]/.test(name) && /[A-Z]/.test(name) && /\s/.test(name)){
         window.alert("Wrong input!");
         return;
     }
@@ -26,9 +26,9 @@ function submitName(){
         .then(response => response.json())
         .then((response) => {
             const {gender, probability} = response;
-            if (!gender) {
+            if (gender == null) {
                 gender_text.innerText = "Name not found!"
-                gender_text.innerText = ""
+                percent_text.innerText = ""
             } else {
                 gender_text.innerText = gender
                 percent_text.innerText = probability
@@ -45,7 +45,7 @@ function saveResult(){
     let name = document.getElementById("name").value;
     let male = document.getElementById("MaleChoice").checked
     let female = document.getElementById("FemaleChoice").checked
-    if(!/[a-z]/.test(str) && /[A-Z]/.test(name)){
+    if(!/[a-z]/.test(name) && /[A-Z]/.test(name) && /\s/.test(name)){
         window.alert("Wrong input!");
         return;
     }
