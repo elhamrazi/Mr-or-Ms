@@ -52,5 +52,17 @@ html  {
     color: white;
     border-radius: 10px;
     visibility: hidden;
+    text-align: center;
   }
   
+  #title{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    padding: 20px;
+    margin-left: 30vmax;
+    margin-right: 30vmax;
+    font-weight: bold;
+    background-color: #8456f0ce;
+    color: white;
+    border-radius: 10px;
+  }
