@@ -2,7 +2,7 @@ function submitName(){
     //get name value from form
     let name = document.getElementById("name").value;
     //check if the name is in valid format.
-    if(!/^[a-z ]+$/.test(name)){
+    if(!/[a-z]/.test(str) && /[A-Z]/.test(name)){
         window.alert("Wrong input!");
         return;
     }
@@ -45,7 +45,7 @@ function saveResult(){
     let name = document.getElementById("name").value;
     let male = document.getElementById("MaleChoice").checked
     let female = document.getElementById("FemaleChoice").checked
-    if(!/^[a-z ]+$/.test(name)){
+    if(!/[a-z]/.test(str) && /[A-Z]/.test(name)){
         window.alert("Wrong input!");
         return;
     }
