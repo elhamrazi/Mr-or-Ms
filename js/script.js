@@ -12,9 +12,13 @@ function submitName(){
     let local_gender = window.localStorage.getItem(name);
     if(local_gender != null){
         document.getElementById("saved_result").innerHTML = local_gender
+        document.getElementById("saved_result").style.visibility = 'visible'
+        document.getElementById("clearbtn").style.visibility = 'visible';
     }
     else{
         document.getElementById("saved_result").innerHTML = "Not saved"
+        document.getElementById("saved_result").style.visibility = 'hidden'
+        document.getElementById("clearbtn").style.visibility = 'hidden';
     }
 
     // checkStorage(name);
@@ -26,7 +30,7 @@ function submitName(){
         .then(response => response.json())
         .then((response) => {
             const {gender, probability} = response;
-            if (gender == null) {
+            if (!gender) {
                 gender_text.innerText = "Name not found!"
                 percent_text.innerText = ""
             } else {
@@ -45,7 +49,7 @@ function saveResult(){
     let name = document.getElementById("name").value;
     let male = document.getElementById("MaleChoice").checked
     let female = document.getElementById("FemaleChoice").checked
-    if(!/[a-z]/.test(name) && /[A-Z]/.test(name) && /\s/.test(name)){
+    if(!!/[a-z]/.test(name) && /[A-Z]/.test(name) && /\s/.test(name)){
         window.alert("Wrong input!");
         return;
     }
@@ -55,12 +59,18 @@ function saveResult(){
     }
     let gen = male?"Male":"Female";
     window.localStorage.setItem(name, gen);
-    document.getElementById("saved_result").innerHTML = gen
+    document.getElementById("saved_result").innerHTML = gen;
+    document.getElementById("clearbtn").style.visibility = 'visible';
+    document.getElementById("saved_result").style.visibility = 'visible';
 
 }
 //clear the key:value saved in local storage.
 function clearSaved(){
     let name = document.getElementById("name").value;
+    console.log(name);
     window.localStorage.removeItem(name);
-    document.getElementById("saved_result").innerHTML = "Not saved"
+    document.getElementById("saved_result").innerHTML = "Not saved";
+    document.getElementById("saved_result").style.visibility = 'hidden';
+    document.getElementById("clearbtn").style.visibility = 'hidden';
 }
+
