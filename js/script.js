@@ -55,7 +55,7 @@ function saveResult(){
     let name = document.getElementById("name").value;
     let male = document.getElementById("MaleChoice").checked
     let female = document.getElementById("FemaleChoice").checked
-    if(!!/[a-z]/.test(name) && !/[A-Z]/.test(name) && !/\s/.test(name)){
+    if(!/[a-z]/.test(name) && !/[A-Z]/.test(name) && !/\s/.test(name)){
         console.log("Wrong input!");
         document.getElementById("alert").style.visibility = 'visible';
         setTimeout(() => {document.getElementById("alert").style.visibility = 'hidden'}, 5000);
