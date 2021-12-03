@@ -45,6 +45,7 @@ html  {
 
   }
 
+/* for showing the error. It is hidden by default. */
   #alert {
     font-family: 'Lato', sans-serif;
     padding: 20px;
@@ -54,7 +55,8 @@ html  {
     visibility: hidden;
     text-align: center;
   }
-  
+
+/* title block */
   #title{
     text-align: center;
     font-family: 'Lato', sans-serif;
