@@ -1,13 +1,19 @@
 function submitName(){
     //get name value from form
     let name = document.getElementById("name").value;
-    //check if the name is in valid format.
-    if(!/[a-z]/.test(name) && /[A-Z]/.test(name) && /\s/.test(name)){
-        window.alert("Wrong input!");
-        return;
-    }
+
     let gender_text = document.getElementById("gender_text")
     let percent_text = document.getElementById("percent_text")
+
+    //check if the name is in valid format.
+    if(!/[a-z]/.test(name) && !/[A-Z]/.test(name) && !/\s/.test(name)){
+        console.log("Wrong input!");
+        document.getElementById("alert").style.visibility = 'visible';
+        setTimeout(() => {document.getElementById("alert").style.visibility = 'hidden'}, 5000);
+        gender_text.innerText = "Error!"
+        percent_text.innerText = "0.0"
+        return;
+    }
 
     let local_gender = window.localStorage.getItem(name);
     if(local_gender != null){
@@ -49,8 +55,10 @@ function saveResult(){
     let name = document.getElementById("name").value;
     let male = document.getElementById("MaleChoice").checked
     let female = document.getElementById("FemaleChoice").checked
-    if(!!/[a-z]/.test(name) && /[A-Z]/.test(name) && /\s/.test(name)){
-        window.alert("Wrong input!");
+    if(!!/[a-z]/.test(name) && !/[A-Z]/.test(name) && !/\s/.test(name)){
+        console.log("Wrong input!");
+        document.getElementById("alert").style.visibility = 'visible';
+        setTimeout(() => {document.getElementById("alert").style.visibility = 'hidden'}, 5000);
         return;
     }
     if(!female && !male){

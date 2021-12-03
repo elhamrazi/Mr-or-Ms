@@ -21,14 +21,14 @@ html  {
 
     margin-left: 30vmax;
     margin-right: 30vmax;
-    margin-top: 10vmax;
+    margin-top: 5vmax;
 
     grid-gap: 10px;
     font-size: 1.1em;
 
     display: grid;
     grid-template-columns: auto auto;
-    background-color: #2196F3;
+    background-color: #dbe9f59c;
 
     border-radius: 25px;
   }
@@ -44,3 +44,13 @@ html  {
     grid-row-end: 3;
 
   }
+
+  #alert {
+    font-family: 'Lato', sans-serif;
+    padding: 20px;
+    background-color: #6f36f4;
+    color: white;
+    border-radius: 10px;
+    visibility: hidden;
+  }
+  
